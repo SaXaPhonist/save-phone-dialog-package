@@ -1,7 +1,8 @@
-# Set Phone number to Local Storage (`phone-set-modal-test`)
+# save-phone-dialog
 
+Framework agnostic library for saving phone number to local storage
 
-## Installation
+## Install
 
 ```bash
 npm install phone-set-modal-test
@@ -11,11 +12,15 @@ yarn add phone-set-modal-test
 
 ## Usage
 
-setPhone: method to open modal
+```javascript
+import { setPhone, saveState } from 'phone-set-modal-test';
 
-    () => Promise<void>
+// Opening modal
+document.getElementById('openModalButton').addEventListener('click', async () => {
+  await setPhone();
+});
 
-saveState: status of phone saving:
-```
-'pending' | 'saved' | 'error'
-```
+
+## License
+
+MIT
